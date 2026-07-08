@@ -33,13 +33,17 @@
       width: 2rem;
     }
 
-    & strong span {
-      display: flex;
-      width: fit-content;
-      align-items: center;
-      justify-content: flex-start;
-      justify-self: center;
-      gap: 0.5rem;
+    & strong {
+      text-align: center;
+
+      & span {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: flex-start;
+        justify-self: center;
+        gap: 0.5rem;
+      }
     }
   }
 
