@@ -15,7 +15,7 @@ export {default as Partnership} from './partnership/Partnership.jsx';
 export {default as DigitalAssets} from './digital-assets/DigitalAssets.jsx';
 export {default as PressAndMedia} from './press-and-media/PressAndMedia.jsx';
 export {default as Testimonials} from './testimonials/Testimonials.jsx';
-export {default as AboutUs} from './about-us/AboutUS.jsx';
+export {default as AboutUs} from './about-us/AboutUs.jsx';
 export {default as Interest} from './interest/Interest.jsx';
 export {default as SpwrScience} from './spwr-science/SpwrScience.jsx';
 export {default as Footer} from './footer/Footer.jsx';
