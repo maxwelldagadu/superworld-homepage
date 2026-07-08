@@ -130,7 +130,5 @@ a{
 
 
 .gradient__bg{
-  background: radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
-  background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
-  background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background-image: radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
 }
