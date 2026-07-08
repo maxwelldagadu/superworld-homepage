@@ -1,0 +1,117 @@
+@use '../../' as *;
+
+.webapp{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background-color: $color-floral-white;
+
+  &__image{
+    flex: 1;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid $color-deep-sky;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem rgba(0,0,0,.4);
+    }
+  }
+
+  &__content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+
+    & p:first-child{
+      font-family: $font-roboto;
+      font-size: 2.5rem;  
+      font-weight: 800;
+      color: $color-night;
+      text-transform: capitalize;
+
+      span{
+        color: $color-blue;
+      }
+    }
+
+    p:not(:first-child){
+      font-family: $font-poppins;
+      font-size: 1.2rem;  
+      font-weight: 400;
+      color: $color-night;
+    }
+
+
+    a {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      align-items: center;
+      font-family: $font-poppins;
+      font-size: 1rem;  
+      font-weight: 400;
+      text-transform: capitalize;
+      color: $color-white;
+      cursor: pointer;
+      background-image: linear-gradient(to right,$color-blue,$color-deep-sky-blue);
+      width: fit-content;
+      padding: 0.5rem 2rem;
+      border-radius: 2rem;
+
+      span{
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1800px){
+  .webapp__content p:first-child{
+    font-size: 4rem;
+  }
+
+  .webapp__content p:not(:first-child){
+    font-size: 1.8rem;
+  }
+
+  .webapp a{
+    font-size: 1.6rem;
+    padding: 1rem 2.6rem;
+
+    span{
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px){
+  .webapp{
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 800px){
+  .webapp__content{
+    padding: 0;
+    text-align: center;
+
+    & a {
+      align-self: center;
+    }
+  }
+}

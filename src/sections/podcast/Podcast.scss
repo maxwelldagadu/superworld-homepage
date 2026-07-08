@@ -1,0 +1,363 @@
+@use '../..' as *;
+
+.podcast{
+  background-color: $color-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 100vh;
+
+
+  &__about{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    &-connect{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 2rem;
+
+      & h2{
+        font-family: $font-poppins;
+        color: $color-white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 1.4;
+
+        p {
+          line-height:1;
+
+          span{
+            display: block;
+            color: transparent;
+            color: $color-deep-sky;
+            font-weight: 800;
+            line-height: 1.2;
+            font-size: 3rem;
+            line-height: 1.4;
+          }
+        }
+      }
+
+      & div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        font-size: 1.5rem;
+        gap: 2rem;
+
+        
+        & a{
+          cursor: pointer;
+          padding: 0.7rem;
+          background-image: $gradient-primary;
+          line-height: 0;
+          border-radius: 2rem;
+          transition: all 0.3s ease-in-out;
+
+          &:hover{
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+
+    &-host{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+
+      & img{
+        height: 100%;
+        max-width: 5rem;
+        border-radius: 50%;
+        background-color: $color-white;
+
+      }
+
+      &_bar{
+        width: 0.2rem;
+        height: 3rem;
+        background-color: $color-blue;
+      }
+
+      &_name{
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        p{
+          font-family: $font-poppins;
+         
+
+          &:first-child{
+            color: $color-white;
+             font-size: 1.1rem;
+          }
+
+          &:last-child{
+             color: $color-sky;
+              font-size: 0.9rem;
+          }
+        }
+      }
+   }
+ }
+
+ &__container{
+    flex:1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-slide{
+      height: 70%;
+      width: 100%;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+
+  
+    &-content{
+      height: 100%;
+      padding: 8rem 0;
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7rem;
+
+      // Thia media query increases the gap when we are on a more wider screen. Above 2300px.
+      @media screen and (min-width:2300px){
+        gap: 10rem;
+      }
+
+      &_video{
+        height: 100%;
+        display: flex;
+        position: relative;
+        display: flex;
+        aspect-ratio: 16 / 9;
+        cursor: pointer;
+
+        &:hover img{
+          transform: scale(1);
+          opacity: 0.8;
+        }
+
+        &:hover &-social a{
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        & img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          align-self: center;
+          border-radius: 2rem;
+
+          transform: scale(1.1);
+          transition: all 1s ease-in-out;
+        }
+
+        &-social{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          inset: 0;
+          padding: 1rem;
+
+          & a{
+            color: $color-white;
+            font-size: 1.5rem;
+            padding: 0.7rem;
+            background-image: $gradient-primary;
+            border-radius: 2rem;
+            line-height: 0;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.8s ease-in-out;  
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width:1700px){
+  .podcast__about-connect h2{
+    font-size: 5rem;
+
+    p span{
+      font-size: 6rem;
+    }
+  }
+
+  .podcast__about-host img{
+    max-width: 7rem;
+  }
+
+  .podcast__about div{
+    font-size: 2.2rem;
+
+    & a {
+      padding: 1.1rem;
+    }
+  }
+
+  .podcast__about-host_name{
+
+    p:first-child{
+      font-size: 1.8rem;
+    }
+
+    & p:last-child{
+      font-size: 1.5rem;
+    }
+  }
+
+  .podcast__about-host_bar{
+    height: 4.3rem;
+  }
+
+  .podcast__container .slider__btn button {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+
+  .podcast__container-content{
+    &_video{
+      &-social{
+        & a{
+          font-size: 2.2rem;
+          padding: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:1400px){
+  .podcast__container-content{
+    padding: 5.5rem 0rem;
+  }
+
+ .podcast__container .slider__btn{
+    bottom: 6rem;
+  }
+}
+
+
+@media screen and (max-width: 1025px){
+  .podcast{
+    flex-direction: column;
+    height: 76rem;
+    gap: 0rem;
+  }
+
+  .podcast__container-content{
+    padding: 2rem 0rem;
+  }
+  
+  .podcast__container .slider__btn{
+    bottom: 0rem;
+  }
+
+}
+
+
+@media screen and (max-width:1000px){
+  .podcast__about-connect h2{
+    font-size: 2.8rem;
+
+    p span{
+      font-size: 2.8rem;
+    }
+  }
+
+  .podcast__about-connect div{
+    font-size: 1.3rem;
+  }
+
+  .podcast__about-host img{
+    max-width: 4rem;
+  }
+
+  .podcast__about-host_bar{
+    height: 2.8rem;
+  }
+}
+
+
+@media screen and (max-width: 890px){
+ 
+  .podcast__container-content{
+    padding: 4rem 0rem;
+  }
+
+  .podcast__container .slider__btn{
+    bottom: 0rem;
+  }
+  
+  .podcast__container-content{
+    gap: 5rem;
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .podcast__container-content{
+    gap: 4rem;
+  }
+
+  .podcast__container .slider__btn button {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+
+   .podcast__about-connect h2{
+    font-size: 2.5rem;
+
+    p span{
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  
+  .podcast__container .slider__btn button {
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+
+  .podcast__about-host{
+    gap: 0.7rem;
+  }
+}

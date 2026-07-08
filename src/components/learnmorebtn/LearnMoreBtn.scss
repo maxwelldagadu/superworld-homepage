@@ -1,0 +1,30 @@
+@use  '../../' as *;
+
+.learnmore__button{
+  padding: 0.6rem 1.2rem;
+  font-family: $font-poppins;
+  color: $color-night;
+  text-transform: capitalize;
+  border: 4px solid;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: $color-floral-white;
+  
+
+  border-image: $gradient-primary 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    background-image: $gradient-primary;
+    color: $color-white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 2000px){
+  .learnmore__button{
+    padding: 1rem 1.8rem;
+    font-size: 1.3rem;
+  }
+}

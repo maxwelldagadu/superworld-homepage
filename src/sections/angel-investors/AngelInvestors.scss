@@ -1,0 +1,244 @@
+@use '../../' as *;
+
+.angelInvestors{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-floral-white;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+
+  /* Slider button */
+  & .slider__btn{
+    bottom: -5%;
+    left: 0;
+  }
+
+
+  & h2{
+    margin-bottom: 2rem;
+    font-family: $font-poppins;
+    text-transform: capitalize;
+    word-spacing: 1rem;
+    font-size: 3rem;
+    color: $color-night;
+    transform: translateY(6rem);
+    transition: all 0.6s ease-in-out;
+  }
+
+
+  &__slider{
+    height: 20rem;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 1rem;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+
+  &__container{
+    flex: 1;
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3.3rem;
+  }
+}
+
+
+.angelInvestors__main{
+  position: relative;
+  height: 100%;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  outline: 2px solid $color-deep-sky;
+  outline-offset: 0.4rem;
+  transition: all 0.5s ease-in-out;
+
+  &:hover{
+    cursor: pointer;
+    transform: translateY(-8px);
+    outline: 3px solid $color-deep-sky-blue;
+  }
+
+  &-image{
+    flex:1;
+    height: 70%;
+    width: 100%;
+    img{
+      object-fit: cover;
+      object-position:top;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+
+  &-info{
+    flex:0.1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: $gradient-primary;
+    padding: 0.5rem 1rem;
+    gap: 0.3rem;
+
+    &_connect{
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+
+      & span{
+        font-family: $font-roboto;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        white-space: nowrap;
+        color: $color-white;
+      }
+
+      & a {
+        font-size: 1.6rem;
+        color: $color-white;
+        line-height: 0;
+      }
+
+      &-work{
+        font-family: $font-poppins;
+        color: $color-white;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        text-transform: capitalize;
+      }
+
+    }
+  }
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1500px){
+  .angelInvestors__container{
+    gap: 5rem;
+  }
+}
+
+
+@media screen and (min-width: 1700px){
+  .angelInvestors h2{
+    font-size: 4rem;
+  }
+  
+  .angelInvestors__main{
+    outline: 3px solid $color-deep-sky;
+  }
+
+  .angelInvestors__main{
+    outline-offset: 10px;
+  }
+
+  .angelInvestors .slider__btn button {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+
+  .angelInvestors__main{
+    width: 25rem;
+  }
+
+  .angelInvestors__slider{
+    height: 28rem;
+  }
+
+  .angelInvestors{
+    margin-bottom: 4rem;
+  }
+
+  .angelInvestors h2{
+    margin-bottom: 4rem;
+  }
+}
+
+
+@media screen and (min-width: 2000px){
+  .angelInvestors__container{
+    gap: 5rem;
+  }
+
+  .angelInvestors__main{
+    width: 25rem;
+  }
+
+  .angelInvestors__slider{
+    height: 28rem;
+  }
+
+
+  .angelInvestors__main-info_connect{
+    span{
+      font-size: 1.9rem;
+    }
+
+    & a {
+      font-size: 1.9rem;
+    }
+   
+    &-work{
+      font-size: 1.3rem;
+    }  
+  }
+}
+
+
+
+@media screen and (max-width: 750px){
+  .angelInvestors h2{
+    font-size: 2.3rem;
+  }
+
+  .angelInvestors .slider__btn{
+    bottom: -2%;
+  }
+}
+
+
+@media screen and (max-width: 650px){
+ 
+  .angelInvestors h2{
+    font-size: 2rem;
+  }
+
+  .angelInvestors .slider__btn button {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+ 
+  .angelInvestors__main-image{
+    height: 0%;
+  }
+
+  .angelInvestors .slider__btn button {
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+}

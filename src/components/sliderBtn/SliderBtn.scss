@@ -1,0 +1,32 @@
+@use '../../' as *;
+
+.slider__btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  align-items: center;
+  position: absolute;
+  bottom: 8rem;
+  gap: 3rem;
+
+
+  & button{
+    font-size: 1.2rem;
+    color: $color-white;
+    padding: 0.5rem;
+    background-image: $gradient-primary;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.85;
+
+    transition: all 0.3s ease-in-out;
+
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

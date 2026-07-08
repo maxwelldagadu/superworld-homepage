@@ -1,0 +1,185 @@
+@use '../../' as *;
+
+.ventureCapital{
+  background-color: $color-floral-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  &__sub-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+
+      
+    & h2{
+      padding: 0 7rem;
+      font-family: $font-poppins;
+      text-transform: capitalize;
+      word-spacing: 1rem;
+      font-size: 3rem;
+      color: $color-night;
+      transform: translateY(6rem);
+      transition: all 0.6s ease-in-out;
+    }
+
+    & h3{
+      padding: 0 7rem;
+      font-family: $font-poppins;
+      font-size: 1.2rem;
+      color: $color-night-50;
+      font-weight: 400;
+    }
+  }
+
+  &__container{
+    position: relative;
+    overflow: hidden;
+    padding: 0 7rem;
+    width: 100%;
+    z-index: 1;
+    
+
+    &::before{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 30rem;
+      background-image: linear-gradient(to right,rgba($color-floral-white,1),rgba($color-floral-white,0));
+      z-index: 2;
+    }
+
+    &::after{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top:0;
+      right:0;
+      height: 100%;
+      width: 30rem;
+      background-image: linear-gradient(to left,rgba($color-floral-white,1),rgba($color-floral-white,0));
+      z-index: 2;
+    }
+  }
+
+  &__slider{
+
+    &-container{
+      white-space: nowrap;
+      width: max-content;
+    }
+
+    &-slides{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      width: max-content;
+      animation: VentureCapital 60s linear infinite;
+      -webkit-animation: VentureCapital 50s linear infinite;
+      
+      & img{
+        width: 6rem;
+
+        &:last-child{
+          margin-right: 6rem;
+        }
+      }
+    }
+  }
+}
+
+
+/* Slider  Animation */
+
+@keyframes VentureCapital{
+  from{
+    transform: translateX(0);
+  }
+
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+/* For webkit browsers */
+
+@-webkit-keyframes VentureCapital{
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 1500px){
+  .ventureCapital__slider-slides img{
+    width: 8rem;
+  }
+
+  .ventureCapital__container::before,
+  .ventureCapital__container::after{
+    width: 30rem;
+  }
+
+  .ventureCapital__sub-heading h3{
+    font-size: 2.2rem;
+  }
+
+  .ventureCapital__sub-heading h2{
+    font-size: 5rem;
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+  .ventureCapital__container::before,
+  .ventureCapital__container::after{
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .ventureCapital__slider-slides img{
+    width: 6rem;
+  }
+}
+
+
+@media screen and (max-width: 750px){
+  .ventureCapital__slider-slides img{
+    width: 5rem;
+  }
+
+  .ventureCapital__sub-heading h2{
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 650px){
+  .ventureCapital__container::before,
+  .ventureCapital__container::after{
+    width: 5rem;
+  }
+
+  .ventureCapital__sub-heading h2,
+  .ventureCapital__sub-heading h3{
+    padding: 0 1rem;
+  }
+}

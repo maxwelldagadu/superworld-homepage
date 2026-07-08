@@ -1,0 +1,27 @@
+
+.city__block{
+  background-image: url(../../assest/images/super-city.jpeg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.city__cloud1{
+  position: absolute;
+  left:-20rem;
+  top: -9rem;
+  height: fit-content;
+  overflow: hidden;
+
+  & img{
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.5;
+  }
+}

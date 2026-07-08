@@ -1,0 +1,79 @@
+@use '../../' as *;
+
+.about{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-floral-white;
+
+  &__container{
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    line-height: 1.3;
+    font-family: $font-poppins;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    margin-top: -14rem;
+    gap: 3rem;
+
+    & p{
+      color: rgba(0,0,0,0.9)
+    }
+
+    & strong img{
+      width: 2rem;
+    }
+
+    & strong span {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: flex-start;
+      justify-self: center;
+      gap: 0.5rem;
+    }
+  }
+
+}
+
+
+
+/* Media queries*/
+
+@media screen and (min-width: 2000px){
+  .about__container{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .about__container{
+    font-size: 1.8rem;
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+  .about__container{
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .about__container{
+    font-size: 1.2rem;
+  }
+
+  .secondary__padding{
+    padding: 2rem 1rem;
+  }
+}

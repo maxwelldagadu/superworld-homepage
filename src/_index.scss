@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Custom font settings*/
+
+$font-roboto:"Roboto",sans-serif;
+
+$font-poppins: "Poppins",sans-serif;
+
+$font-boldonse: "Boldonse",sans-serif;
+
+$font-anton: "Anton", sans-serif;
+
+
+/* Custom colors */
+
+$bullish-green: #1aca9a;
+
+$bullish-green-bg: #1aca9a29;
+
+$color-night: #0D1120;
+
+$color-night-50: #171E2C;
+
+$color-night-500: #0D1120;
+
+$color-white : #ffffff;
+
+$color-sky: #39efef;
+
+$color-deep-sky: #44c6fa;
+
+$color-deep-sky-blue: #036da8;
+
+$color-floral-white: #f9f5ed;
+
+$color-blue: #1b40c7;
+
+$color-dark-blue:#002853;
+
+$color-black: #000000;
+
+/* Custom gradients*/
+
+$gradient-primary: linear-gradient(to right,$color-sky,$color-blue);
+
+$gradient-superworld: linear-gradient(to bottom,$color-white,$color-floral-white 50%,$color-deep-sky-blue 80% );
+
+$gradient-border-image: linear-gradient(to right,$color-floral-white,$color-blue);
