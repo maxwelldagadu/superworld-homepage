@@ -2,7 +2,6 @@
 
 .testimonials{
   background-color:  $color-black;
-  height: 90vh;
   width: 100%;
   margin-top: -0.5rem;
 
@@ -19,17 +18,17 @@
   }
 
   &__container{
-    height: 100%;
+    height: 40rem;
     width: max-content;
     display: flex;
     gap: 5rem;
+    justify-content: center;
     align-items: center;
   }
 
   &__content{
     height: 100%;
-    width: 80vw;
-    flex: 1;
+    width: 60vw;
     display: flex;
     gap: 3rem;
     justify-content: flex-start;
@@ -65,6 +64,7 @@
       font-family: $font-poppins;
       color: $color-floral-white;
       text-transform: capitalize;
+      line-height: 1;
 
       & h3{
         display: inline;
@@ -132,6 +132,10 @@
       font-size: 1.2rem;
     }
   }
+
+  .testimonials__container{
+    gap: 10rem;
+  }
 }
 
 @media screen and (min-width: 2000px){
@@ -141,28 +145,36 @@
     padding: 0.7rem;
   }
 
+  .testimonials__sliderBtn .slider__btn{
+    bottom: 6rem ;
+  }
+
   .testimonials__content-about > p{
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .testimonials__content-about{
-    row-gap: 3rem;
+    row-gap: 1.8rem;
   }
 
   .testimonials__content-user_info{
     h3{
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     span{
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
+
+  .testimonials__container{
+    height: 45rem;
+  }
+
 }
 
 
-
-@media screen and (max-width:1200px){
+@media screen and (max-width:1250px){
   .testimonials__content-about > p{
     font-size: 1.16rem;
   }
@@ -170,16 +182,16 @@
   .testimonials__content{
     gap: 2rem;
   }
+
+  .testimonials__container{
+    height: 35rem;
+  }
 }
 
 
-@media screen and (max-width:700px){
+@media screen and (max-width:1150px){
   .testimonials__content-about > p{
-    font-size: 1.2rem;
-  }
-
-  .testimonials__content{
-    gap: 1rem;
+    font-size: 1.1rem;
   }
 
   .testimonials__content-user_info{
@@ -191,10 +203,35 @@
       font-size: 0.8rem;
     }
   }
+
+  .testimonials__container{
+    height: 30rem;
+  }
 }
 
 
-@media screen and (max-width:650px){
+@media screen and (max-width:950px){
+  .testimonials__content-about > p{
+    font-size: 1.05rem;
+  }
+
+  .testimonials__content-user_info{
+    h3{
+      font-size: 0.8rem;
+    }
+
+    span{
+      font-size: 0.8rem;
+    }
+  }
+
+  .testimonials__container{
+    height: 28rem;
+  }
+}
+
+
+@media screen and (max-width:850px){
   
  .testimonials__content{
     flex-direction: column-reverse;
@@ -203,38 +240,24 @@
   }
   
   .testimonials__content_user-photo{
-    width: 5rem;
-    max-height: 5rem;
+    width: 30%;
+    height: 30%;
   }
 
   .testimonials__content-about{
     flex: 0;
   }
 
-  .testimonials__content-about > p{
-    font-size: 1.05rem;
-  }
-
-  .testimonials__content-user_info{
-    h3{
-      font-size: 1rem;
-    }
-
-    span{
-      font-size: 1rem;
-    }
+  .testimonials__content{
+    gap: 1rem;
   }
 }
 
 
-@media screen and (max-width:500px){
+@media screen and (max-width:790px){
  
-  .testimonials__content-user_info{
-    white-space: normal;
-  }
-
   .testimonials__content-about > p{
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .testimonials__content-user_info{
@@ -245,5 +268,63 @@
     span{
       font-size: 0.8rem;
     }
+  }
+}
+
+@media screen and (max-width:750px){
+ 
+  .testimonials__content-about > p{
+    font-size: 0.9rem;
+  }
+
+  .testimonials__content-user_info{
+    h3{
+      font-size: 0.7rem;
+    }
+
+    span{
+      font-size: 0.7rem;
+    }
+  }
+
+  .testimonials__container{
+    height: 25rem;
+  }
+
+}
+
+@media screen and (max-width:690px){
+ 
+  .testimonials__content-about > p{
+    font-size: 0.7rem;
+  }
+
+  .testimonials__content-user_info{
+    h3{
+      font-size: 0.6rem;
+    }
+
+    span{
+      font-size: 0.6rem;
+    }
+  }
+
+  .testimonials__content-user_info{
+    white-space: normal;
+  }
+
+  .testimonials__content{
+    padding: 1rem;
+  }
+
+  .testimonials__content_user-photo{
+    width: 30%;
+    max-height: 25%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .testimonials__content-about{
+    row-gap: 0.5rem;
   }
 }

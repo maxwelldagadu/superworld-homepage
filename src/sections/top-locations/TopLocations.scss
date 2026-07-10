@@ -110,6 +110,30 @@
   }
 
   .toplocations h2{
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width:500px){
+  .toplocations h2{
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width:190px){
+  .toplocations h2{
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width:140px){
+  .toplocations h2{
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (max-width:120px){
+  .toplocations h2{
+    margin-bottom: 10rem;
   }
 }

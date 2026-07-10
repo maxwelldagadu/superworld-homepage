@@ -58,6 +58,6 @@ You could also earn when events happen in locations you own.
 
 My working SuperWorld homepage: https://superworld-homepage-redesigned.vercel.app/
 
-Original SuperWorld homepage: https://www.superworldapp.com/
+Official SuperWorld homepage: https://www.superworldapp.com/
 
 Made with ❤

@@ -6,6 +6,33 @@
   margin-block-end: 0;
 }
 
+html{
+  font-size: 100%;
+  
+  @media screen and (max-width: 352px){
+    font-size: 62%;
+  }
+
+  @media screen and (max-width: 220px){
+    font-size: 55%;
+  }
+
+  @media screen and (max-width: 194px){
+    font-size: 50%;
+  }
+
+  @media screen and (max-width: 178px){
+    font-size: 40%;
+  }
+
+  @media screen and (max-width: 140px){
+    font-size: 30%;
+  }
+
+   @media screen and (max-width: 108px){
+    font-size: 20%;
+  }
+}
 
 body{
   margin: 0;

@@ -32,14 +32,18 @@ const Testimonials = () => {
 
     const testimonialSlide = (direction) => {
     const {current} = slider;
-
-    const rowGap = 5 * 16; /* There's a 5rem row-gap between each testimonial. For the testimonial 
+    let gap = 5; // Default column gap. 5rem
+    // When screen size is 1500px and above we chnage the column gap to 10rem
+    if(window.innerWidth >= 1500){
+      gap = 10;
+    }
+    const columnGap = gap * 16; /* There's a 5rem column-gap between each testimonial. For the testimonial 
     to be well centered on each slide, the 5rem has to be converted into pixels and added to the
     testimonial width (clientWidth) */
 
     if(!current) return;
     const testimonials = current.firstElementChild;
-    const scrollLenght = testimonials.firstElementChild.clientWidth + rowGap;
+    const scrollLenght = testimonials.firstElementChild.clientWidth + columnGap;
 
     current.scrollBy(
       {left: direction === "left" ? - scrollLenght : +scrollLenght,
